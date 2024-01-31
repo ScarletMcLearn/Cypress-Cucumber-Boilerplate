@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "latest",
+    "@cypress/browserify-preprocessor": "latest",
+    "cypress": "latest"
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.1",
+    "cypress-mochawesome-reporter": "^3.8.1"
+  },
+
+  "scripts": {
+    "test": "npm run ui-test-allure",
+    "ui-test-allure":"cypress run --browser chrome --env allure=true",
+    "allure:report" :"allure generate allure-results --clean -o allure-reports"
+  }
+
+  
+}
